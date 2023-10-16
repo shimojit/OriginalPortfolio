@@ -1,0 +1,21 @@
+services:
+  db:
+    image: mysql:8.1.0
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    ports:
+      - ${MYSQL_PORT}:3306
+    volumes:
+      - db-data:/var/lib/mysql
+  web:
+    build: .
+    depends_on:
+      - db
+    environment:
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
+    ports:
+      - ${RAILS_PORT}:3000
+    volumes:
+      - .:/OriginalPortfolio
+volumes:
+  db-data:
