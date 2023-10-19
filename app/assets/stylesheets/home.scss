@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 /* reset ================================ */
+/*
 * {
   box-sizing: border-box;
 }
@@ -37,8 +38,9 @@ form input[type="submit"] {
   border: none;
   cursor: pointer;
 }
-
+*/
 /* 共通レイアウト ================================ */
+/*
 body {
   color: #2d3133;
   background-color: #3ecdc6;
@@ -62,8 +64,9 @@ body {
   padding-right: 15px;
   clear: both;
 }
-
+*/
 /* ヘッダー ================================ */
+/*
 header {
   height: 64px;
   position: absolute;
@@ -115,8 +118,9 @@ header {
   margin: 0;
   font-size: 13px;
 }
-
-/* top ================================ */
+*/
+/* intro ================================ */
+/*
 .top-main {
   padding: 200px 0 100px;
   text-align: center;
@@ -148,8 +152,9 @@ header {
 .top-main p {
   font-size: 24px;
 }
-
-/* about ================================ */
+*/
+/* learn ================================ */
+/*
 .about-main {
   padding: 180px 8% 0;
   color: white;
@@ -169,8 +174,9 @@ header {
 .about-img {
   width: 84%;
 }
-
+*/
 /* フォーム================================ */
+/*
 .form {
   max-width: 600px;
   margin: 0 auto;
@@ -227,8 +233,9 @@ header {
   display: table;
   clear: both;
 }
-
+*/
 /* フラッシュ ================================ */
+/*
 .flash {
   padding: 10px 0;
   color: white;
@@ -241,3 +248,4 @@ header {
   border-radius: 0 0 2px 2px;
   font-size: 14px;
 }
+*/

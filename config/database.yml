@@ -51,6 +51,8 @@ test:
 #
 production:
   <<: *default
-  database: OriginalPortfolio_production
-  username: OriginalPortfolio
-  password: <%= ENV['ORIGINALPORTFOLIO_DATABASE_PASSWORD'] %>
+  username: <%= Rails.application.credentials.planetscale&.fetch(:username) %>
+  password: <%= Rails.application.credentials.planetscale&.fetch(:password) %>
+  database: <%= Rails.application.credentials.planetscale&.fetch(:database) %>
+  host: <%= Rails.application.credentials.planetscale&.fetch(:host) %>
+  ssl_mode: verify_identity
