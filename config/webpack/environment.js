@@ -1,24 +1,26 @@
 const { environment } = require('@rails/webpacker')
 
-module.exports = environment
-
-// 追記
-function hotfixPostcssLoaderConfig (subloader) {
-  const subloaderName = subloader.loader
-  if (subloaderName === 'postcss-loader') {
-    if (subloader.options.postcssOptions) {
-      console.log(
-        '\x1b[31m%s\x1b[0m',
-        'Remove postcssOptions workaround in config/webpack/environment.js'
-      )
-    } else {
-      subloader.options.postcssOptions = subloader.options.config;
-      delete subloader.options.config;
+// 追加　
+// ここから
+const customConfig = {
+  resolve: {
+    fallback: {
+      dgram: false,
+      fs: false,
+      net: false,
+      tls: false,
+      child_process: false
     }
   }
-}
+};
 
-environment.loaders.keys().forEach(loaderName => {
-  const loader = environment.loaders.get(loaderName);
-  loader.use.forEach(hotfixPostcssLoaderConfig);
-});
+environment.config.delete('node.dgram')
+environment.config.delete('node.fs')
+environment.config.delete('node.net')
+environment.config.delete('node.tls')
+environment.config.delete('node.child_process')
+
+environment.config.merge(customConfig);
+// ここまで
+
+module.exports = environment
