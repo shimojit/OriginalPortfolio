@@ -21,4 +21,6 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* memo
+  * render.com（本番環境）へのリリースがようやく完了した。
+    * コミットID:c1e7db8e1801652f65d64d596bde848274b2d44d
