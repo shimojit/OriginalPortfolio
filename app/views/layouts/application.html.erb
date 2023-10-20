@@ -11,6 +11,15 @@
   </head>
 
   <body>
+    <header>
+      <div class="header-logo">
+        <%= link_to("introduction", "/") %>
+      </div>
+      <div class="header-menus">
+        <%= link_to("学習中", "/learn") %>
+      </div>
+    </header>
+
     <%= yield %>
   </body>
 </html>
