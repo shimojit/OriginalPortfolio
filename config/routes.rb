@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   # ルートURL
   root "home#intro"
 
-  get "/learn", to: "home#learn"
+  # get "/learn", to: "home#learn"
+  get "/learn", to: "home#dummy"
 
 
   # ==============================学習用に以下のルーティングも記載する。==============================
