@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   # get "/learn", to: "home#learn"
   get "/learn", to: "home#dummy"
 
+  get "/react", to: "home#react"
+
 
   # ==============================学習用に以下のルーティングも記載する。==============================
 

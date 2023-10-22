@@ -7,4 +7,7 @@ class HomeController < ApplicationController
 
   def learn
   end
+
+  def react
+  end
 end
