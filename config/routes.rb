@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   # ルートURL
   root "home#intro"
 
-  # get "/learn", to: "home#learn"
-  get "/learn", to: "home#dummy"
+  get "/learn", to: "home#learn"
+  # get "/learn", to: "home#dummy"
 
   get "/react", to: "home#react"
 
