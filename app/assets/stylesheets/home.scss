@@ -58,13 +58,8 @@ header {
   line-height: 64px;
 }
 
-.header-menus {
-  float: right;
-  padding-right: 20px;
-}
-
 /* intro ================================ */
-.intro-main {
+.intro-wrapper {
   padding: 200px 0 100px;
   text-align: center;
   position: absolute;
@@ -80,8 +75,10 @@ header {
   background-image: url("home_images/toa-heftiba-QnUywvDdI1o-unsplash.jpg");
 }
 
-/* dummy ================================ */
-
-/* learn ================================ */
-
 /* footer ================================ */
+footer {
+  height: 32px;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+}
